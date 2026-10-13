@@ -1,0 +1,5 @@
+build/
+dist/
+data/*.lock
+data/*.tmp
+data/*.bak

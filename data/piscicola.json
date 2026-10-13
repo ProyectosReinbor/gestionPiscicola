@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "users": [
+    {
+      "id": "piscicultor",
+      "name": "Ana Martínez",
+      "role": "Piscicultor",
+      "station": "Todas",
+      "salt": "emYEflI0mgyb0thGeLBhJQ\u003d\u003d",
+      "hash": "GRxbyXUz0oudV0IL8RN45tZszaw2w5SvCnbmRtLu1Zc\u003d",
+      "active": true
+    },
+    {
+      "id": "encargado",
+      "name": "Carlos Pérez",
+      "role": "Encargado de la estación",
+      "station": "Cumaral",
+      "salt": "4PSi5AOh0LSmO47cRhKZ4Q\u003d\u003d",
+      "hash": "qVCMoiJYTZvIs2CrIZac2mZlRMIfrukUb1Qov6b46qY\u003d",
+      "active": true
+    },
+    {
+      "id": "encargado2",
+      "name": "Laura Gómez",
+      "role": "Encargado de la estación",
+      "station": "Cubarral",
+      "salt": "BWkLkjZFuveVz2nOJylgEA\u003d\u003d",
+      "hash": "UAH13HX0lZoXTErAasX4Trz9t4Nu4akzinImXYe4jyQ\u003d",
+      "active": true
+    }
+  ],
+  "ponds": [
+    {
+      "id": "E001",
+      "name": "Estanque 1",
+      "station": "Cumaral",
+      "keeperId": "encargado",
+      "species": "Tilapia",
+      "system": "Aireador",
+      "purpose": "Venta",
+      "state": "En producción",
+      "size": 1200.0
+    },
+    {
+      "id": "E002",
+      "name": "Estanque 2",
+      "station": "Cumaral",
+      "keeperId": "encargado",
+      "species": "Cachama",
+      "system": "Aireador",
+      "purpose": "Venta",
+      "state": "En descanso",
+      "size": 1200.0
+    },
+    {
+      "id": "E003",
+      "name": "Estanque 3",
+      "station": "Cubarral",
+      "keeperId": "encargado2",
+      "species": "Tilapia",
+      "system": "Aireador",
+      "purpose": "Venta",
+      "state": "En producción",
+      "size": 1200.0
+    }
+  ],
+  "lots": [
+    {
+      "id": "L001",
+      "pondId": "E001",
+      "species": "Tilapia",
+      "date": "2026-08-12",
+      "state": "Activo",
+      "reason": "",
+      "quantity": 2000,
+      "months": 6
+    },
+    {
+      "id": "L003",
+      "pondId": "E003",
+      "species": "Tilapia",
+      "date": "2026-08-12",
+      "state": "Activo",
+      "reason": "",
+      "quantity": 2000,
+      "months": 6
+    }
+  ],
+  "feedings": [],
+  "notices": [],
+  "audit": []
+}
