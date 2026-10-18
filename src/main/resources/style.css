@@ -20,7 +20,8 @@
 .metric { -fx-font-size: 27px; -fx-font-weight: bold; -fx-text-fill: #087f80; }
 .table-view { -fx-background-color: white; -fx-border-color: #dfe8ed; -fx-border-radius: 6; }
 .table-view .column-header, .table-view .column-header-background .filler { -fx-background-color: #e7f0f3; -fx-pref-height: 40; }
-.table-row-cell { -fx-cell-size: 40; }
+.table-row-cell { -fx-cell-size: 46; }
+.table-cell { -fx-padding: 0 14 0 14; -fx-alignment: center-left; }
 .table-row-cell:odd { -fx-background-color: #f6f9fb; }
 .table-row-cell:selected { -fx-background-color: #b7deda; }
 .table-row-cell:selected .text { -fx-fill: #123d49; }

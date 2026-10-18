@@ -3,7 +3,7 @@
   "users": [
     {
       "id": "piscicultor",
-      "name": "Ana Martínez",
+      "name": "Marcos Gutierrez",
       "role": "Piscicultor",
       "station": "Todas",
       "salt": "emYEflI0mgyb0thGeLBhJQ\u003d\u003d",
@@ -62,6 +62,17 @@
       "purpose": "Venta",
       "state": "En producción",
       "size": 1200.0
+    },
+    {
+      "id": "0a3e1f3f-c3b5-4f00-8729-bcfed7dabde6",
+      "name": "Estanque2",
+      "station": "Cumaral",
+      "keeperId": "encargado",
+      "species": "cachama",
+      "system": "Aireador",
+      "purpose": "Reproducción",
+      "state": "Activo",
+      "size": 5000.0
     }
   ],
   "lots": [
@@ -87,6 +98,32 @@
     }
   ],
   "feedings": [],
-  "notices": [],
-  "audit": []
+  "notices": [
+    {
+      "id": "c6f13ba8-0ba0-4562-9523-64563500f3e5",
+      "pondId": "E001",
+      "type": "Bajo oxígeno",
+      "detail": "Presenta Baja oxigenación, posible muerte",
+      "date": "2026-10-18T10:48:26.949911100",
+      "userId": "encargado",
+      "status": "Aprobado / atendido"
+    }
+  ],
+  "audit": [
+    {
+      "date": "2026-10-18T10:46:42.938635200",
+      "userId": "piscicultor",
+      "action": "Estanque guardado: 0a3e1f3f-c3b5-4f00-8729-bcfed7dabde6"
+    },
+    {
+      "date": "2026-10-18T10:48:26.949911100",
+      "userId": "encargado",
+      "action": "Alerta/reporte: c6f13ba8-0ba0-4562-9523-64563500f3e5"
+    },
+    {
+      "date": "2026-10-18T10:51:09.922502500",
+      "userId": "piscicultor",
+      "action": "Reporte c6f13ba8-0ba0-4562-9523-64563500f3e5: Aprobado / atendido"
+    }
+  ]
 }

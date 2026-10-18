@@ -62,8 +62,25 @@ public class App extends Application {
     }
     <T> TableView<T> table(List<T> rows,String[] names,List<Function<T,String>> values) {
         TableView<T> t=new TableView<>(FXCollections.observableArrayList(rows));
-        for(int i=0;i<names.length;i++) { Function<T,String> value=values.get(i); TableColumn<T,String> c=new TableColumn<>(names[i]); c.setCellValueFactory(x->new SimpleStringProperty(value.apply(x.getValue()))); c.setPrefWidth(145); t.getColumns().add(c); }
-        t.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY_FLEX_LAST_COLUMN); t.setPrefHeight(300); t.setPlaceholder(new Label("No hay registros disponibles.")); return t;
+        double suma=0;
+        for(int i=0;i<names.length;i++) { Function<T,String> value=values.get(i); TableColumn<T,String> c=new TableColumn<>(names[i]); c.setCellValueFactory(x->new SimpleStringProperty(value.apply(x.getValue()))); c.setPrefWidth(ancho(names[i])); suma+=c.getPrefWidth(); t.getColumns().add(c); }
+        final double anchoColumnas=suma+20;
+        t.widthProperty().addListener((obs,antes,ahora)->t.setColumnResizePolicy(anchoColumnas<=ahora.doubleValue()?TableView.CONSTRAINED_RESIZE_POLICY_FLEX_LAST_COLUMN:TableView.UNCONSTRAINED_RESIZE_POLICY));
+        t.setPrefHeight(300); t.setPlaceholder(new Label("No hay registros disponibles.")); return t;
+    }
+        double ancho(String titulo) {
+        return switch (titulo) {
+            case "Fecha" -> 170;
+            case "Descripción" -> 280;
+            case "Estado" -> 170;
+            default -> Math.max(120, titulo.length() * 9 + 40);
+        };
+    }
+
+    String fecha(String texto) {
+        if (texto == null) return "";
+        String limpio = texto.replace('T', ' ');
+        return limpio.substring(0, Math.min(16, limpio.length()));
     }
     String pondName(String id) { return service.pond(id).name; }
     void data() {
@@ -114,7 +131,7 @@ public class App extends Application {
         page("Gestionar alimentación","Registre cada suministro diario en kilogramos. Se acumulará en el lote activo.");
         content.getChildren().addAll(button("Registrar alimentación",()-> { GridPane g=grid(); ComboBox<Pond> p=new ComboBox<>(FXCollections.observableArrayList(service.ponds().stream().filter(x->service.lots().stream().anyMatch(l->l.pondId.equals(x.id)&&l.state.equals("Activo"))).toList())); p.getSelectionModel().selectFirst(); DatePicker day=new DatePicker(LocalDate.now()); TextField kg=field(""),food=field(""); row(g,0,"Estanque",p);row(g,1,"Fecha",day);row(g,2,"Cantidad (kg)",kg);row(g,3,"Alimento / concentrado",food); dialog("Registrar alimentación",g,()-> {if(p.getValue()==null)throw new IllegalArgumentException("No hay estanques con lote activo.");service.feed(p.getValue().id,date(day),number(kg),food.getText().trim());feeding();}); }),table(service.feedings(),new String[]{"Fecha","Estanque","Alimento","Cantidad kg","Registrado por"},List.of(f->f.date,f->pondName(f.pondId),f->f.food,f->String.valueOf(f.kg),f->f.userId)));
     }
-    TableView<Notice> noticeTable() { return table(service.notices(),new String[]{"Fecha","Estanque / finca","Tipo","Descripción","Estado"},List.of(n->n.date.replace('T',' '),n->service.pond(n.pondId).toString(),n->n.type,n->n.detail,n->n.status)); }
+    TableView<Notice> noticeTable() { return table(service.notices(),new String[]{"Fecha","Estanque / finca","Tipo","Descripción","Estado"},List.of(n->fecha(n.date),n->service.pond(n.pondId).toString(),n->n.type,n->n.detail,n->n.status)); }
     void alerts() {
         page(service.owner()?"Alertas y aprobaciones":"Registrar alerta de boqueo","Las alertas quedan visibles al piscicultor en esta aplicación. Los daños requieren su aprobación."); TableView<Notice> t=noticeTable();content.getChildren().add(t);
         if(service.owner())content.getChildren().add(new HBox(12,button("Atender / aprobar",()-> {service.resolve(selected(t),true);alerts();}),button("Rechazar reporte",()-> { service.resolve(selected(t),false);alerts();})));
