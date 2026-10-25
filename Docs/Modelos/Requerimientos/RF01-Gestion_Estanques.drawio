@@ -1,0 +1,48 @@
+<mxfile host="app.diagrams.net" pages="2">
+  <diagram name="Página-1" id="Ef3tJcN1Iyz766rDwqJt">
+    <mxGraphModel dx="878" dy="440" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="iGQIDx1M6LfxiWaryAve-2" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeWidth=2;strokeColor=light-dark(#000000,#000000);fillColor=none;fillStyle=dashed;" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;span style=&quot;font-size: 17px; color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;Piscicultor&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="40" x="110" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="k1nYUJixuqDTnTZV6kgH-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fillColor=none;strokeColor=light-dark(#000000,#000000);strokeWidth=2;" value="&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 16px; color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;Sistema de Gestión de una Piscícola&lt;/font&gt;" vertex="1">
+          <mxGeometry height="170" width="470" x="200" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="JmylQE422u1_DeGNOb21-6" edge="1" parent="1" source="k1nYUJixuqDTnTZV6kgH-3" style="edgeStyle=none;shape=wire;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;dashed=1;endArrow=none;endFill=0;strokeColor=light-dark(#000000,#000000);" target="iGQIDx1M6LfxiWaryAve-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k1nYUJixuqDTnTZV6kgH-3" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fillColor=none;fontColor=#000000;strokeColor=light-dark(#000000,#000000);" value="&lt;b style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;; font-size: 15px; color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;Gestionar estanque&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="160" x="230" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="_WMMJ-EjNcSgDpmCwc59-1" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeWidth=2;strokeColor=light-dark(#000000,#000000);fillColor=none;" value="&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;Encargado de la&amp;nbsp;&lt;/span&gt;&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;Estación&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="40" x="110" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="JmylQE422u1_DeGNOb21-3" edge="1" parent="1" source="k1nYUJixuqDTnTZV6kgH-3" style="endArrow=classic;dashed=1;html=1;rounded=0;exitX=0.979;exitY=0.588;exitDx=0;exitDy=0;exitPerimeter=0;endFill=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#000000);" target="JmylQE422u1_DeGNOb21-4" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="410" y="255" as="sourcePoint" />
+            <mxPoint x="480" y="90" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JmylQE422u1_DeGNOb21-4" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fillColor=none;fontColor=#000000;strokeColor=light-dark(#000000,#000000);" value="&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;&lt;b&gt;Programar Cosecha&lt;/b&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="170" x="490" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="JmylQE422u1_DeGNOb21-7" edge="1" parent="1" source="k1nYUJixuqDTnTZV6kgH-3" style="edgeStyle=none;shape=wire;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.3333333333333333;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;endArrow=none;endFill=0;strokeColor=light-dark(#000000,#000000);" target="_WMMJ-EjNcSgDpmCwc59-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JmylQE422u1_DeGNOb21-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;&amp;lt;&amp;lt; include &amp;gt;&amp;gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="80" x="395" y="210" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="k84X1UuQFjrlEKx_ijqO" name="Página-2">
+    <mxGraphModel dx="860" dy="483" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
